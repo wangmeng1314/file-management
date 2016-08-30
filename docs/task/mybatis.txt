@@ -1,0 +1,148 @@
+1：缓存的必要性。
+mybatis缓存上面的话主要分为一级缓存和二级缓存，一级缓存是默认开启的，而二级缓存并不是默认开启，需要我们手动去配置。
+在这个地方我还学到了很重要的一个概念，叫做缓存命中。
+我们使用缓存的目的就是为了节约我们数据库的宝贵资源，而如果大量的缓存没有命中的话，我们配置缓存本身就失去了意义。
+2：mybatis二级缓存
+mybatis的二级缓存不开放是有原因的，我们知道，ceud中，cud操作都会引起全部缓存的失效，而假如我的缓存数据很庞大的话，可能会导致我的缓存在很久的时间才能再刷一遍，这个时候就得不尝失了。这就涉及到缓存的控制粒度的问题。
+但是，mybatis的二级缓存在有些场合还是非常必要的。因此还是应该对mybatis的二级缓存有一定的认识。
+3：mybatis整合redis实现分布式缓存（多台服务器共享数据库缓存）
+当然解决控制缓存粒度的问题我们可以采取将第三方的缓存框架纳入我们的管理中来，实现和mybatis框架的整合。
+那我们可以看到在mybatis的官网上就有了类似的整合，但是却没有很详细的配置，如此来说，我们就可以实现了。
+对于jar包的配置，以及
+下面的是我们对redis的配置。
+redis.properties
+host=localhost
+port=6379
+connectionTimeout=5000
+soTimeout=4000
+password=
+database=0
+#设置对应的namespace的失效时间
+com.ehaoyao.service.dao.MealDao=5
+com.ehaoyao.service.dao.GoodsDao=10
+4：mybatis的细粒度的缓存实现（这是我们需要重点考虑的问题）
+
+threadlocal，线程池
+
+异步队列
+
+5:使用spring自带的datasource（org.springframework.jdbc.datasource.DriverManagerDataSource）在每次请求的时候都需要新建一个连接，在建立连接的时候每一次都需要验证用户名和密码，这些无效的等待就将我们的时间消耗殆尽，于是，数据库连接池我们就需要用起来。
+现在我们使用的数据源是com.alibaba.druid.pool.DruidDataSource，这是阿里巴巴开源的数据源，其性能可以说已经得到了验证。
+
+6：类型别名是为 Java 类型设置一个短的名字。它只和 XML 配置有关，存在的意义仅在于用来减少类完全限定名的冗余。例如:
+<typeAliases>
+  <typeAlias alias="Author" type="domain.blog.Author"/>
+  <typeAlias alias="Blog" type="domain.blog.Blog"/>
+  <typeAlias alias="Comment" type="domain.blog.Comment"/>
+  <typeAlias alias="Post" type="domain.blog.Post"/>
+  <typeAlias alias="Section" type="domain.blog.Section"/>
+  <typeAlias alias="Tag" type="domain.blog.Tag"/>
+</typeAliases>
+方便我们xml的配置。
+7：完整的setting：
+<settings>
+  <setting name="cacheEnabled" value="true"/>
+  <setting name="lazyLoadingEnabled" value="true"/>
+  <setting name="multipleResultSetsEnabled" value="true"/>
+  <setting name="useColumnLabel" value="true"/>
+  <setting name="useGeneratedKeys" value="false"/>
+  <setting name="autoMappingBehavior" value="PARTIAL"/>
+  <setting name="autoMappingUnknownColumnBehavior" value="WARNING"/>
+  <setting name="defaultExecutorType" value="SIMPLE"/>
+  <setting name="defaultStatementTimeout" value="25"/>
+  <setting name="defaultFetchSize" value="100"/>
+  <setting name="safeRowBoundsEnabled" value="false"/>
+  <setting name="mapUnderscoreToCamelCase" value="false"/>
+  <setting name="localCacheScope" value="SESSION"/>
+  <setting name="jdbcTypeForNull" value="OTHER"/>
+  <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
+</settings>
+
+8：存储过程的使用。
+
+9：druiddatasource的sql监控。（一般来说，在项目中最影响我们对外提供的接口效率的就是sql语句了，而这个时候我们需要对sql做出一定的分析，当然，我们可以自己进行分析，但是，如果有一款工具可以直接为我们查找出来，我们何乐而不为呢？）
+10:自己试着设计服务层的缓存。
+
+11：nginx服务器的基本配置，如何实现智能dns解析。
+
+12：spring整合redis作为缓存。博文http://blog.csdn.net/evankaka/article/details/50396325。
+
+13：对于数据源的spring监控而言，我觉得作用并不是很大，但是我在其中学到的东西是aop的强大，我觉得这是一种非常好的思想。
+（总结）
+
+
+
+14：虽然目前我在druidDataSource上的监控
+
+
+
+
+15：自定义filter我们可以实现自己接口调用的统计。
+这对于webservice来说还是比较有用的。
+
+16：spring+mybatis实现主从库配置
+
+
+
+17：拒绝连表查询，可以在业务层进行组装，但是拒绝链表。
+
+18：like子句不敢乱用。很耗时和消耗性能的
+
+
+
+
+
+
+
+
+
+18：spring中的parent标签，说明一个bean是另一个bean的父类，也就继承了父类的一些属性。公共的属性需要这样配置。
+
+19：看了一下，网上spring集成redis作为分布式缓存无非也就是下面几种：
+1：使用redis作为mybatis数据库的二级缓存，按照查询条件的话，
+http://c.biancheng.net/cpp/html/2593.html
+多线程相关的问题详解
+
+.abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+20:使用ajax请求后台api接口：
+
+21：自己的竞争力不应该和公司绑定在一起，你应该有自己有辨识度的地方。
+自己促销项目中的缓存策略就可以看一下。
+
+22：下载我们遇到的连接池都有哪些
+?
+1:druid数据源的连接池?
+2:线程池
+3：redis连接池
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
