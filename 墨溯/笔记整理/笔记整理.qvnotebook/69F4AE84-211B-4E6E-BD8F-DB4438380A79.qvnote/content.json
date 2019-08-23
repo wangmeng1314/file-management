@@ -1,0 +1,9 @@
+{
+  "title": "并发相关",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "```java\njava.lang.Thread \njava.lang.Runnable \njava.util.concurrent.Callable \njava.util.concurrent.locks.ReentrantLock \njava.util.concurrent.locks.ReentrantReadWriteLock \njava.util.concurrent.atomic.Atomic.* \njava.util.concurrent.Semaphore \njava.util.concurrent.CountDownLatch \njava.util.concurrent.CyclicBarrier \njava.util.concurrent.ConcurrentHashMap \njava.util.concurrent.Executors\n```\n上述为java并发需要掌握的工具类等。\n\n面对并发编程我们需要明确的是自己的问题，我觉得主要存在以下几个点：\n- 1、多线程下数据同步（防止脏数据的产生）\n  - 根本来源来自java的线程的内存模型 \n- 2、多线程下避免锁或者减小锁的作用域\n  - 读写分离缩小锁的作用域\n    - CopyOnWriteArrayList\n    - 读写锁 ReentrantReadWriteLock\n  - 锁的分类\n    - syngoized\n    - Locks\n- 3、多线程下任务模型拆分\n  - Master Worker 模式\n  - refactor 模式\n  - future 模式\n- 4、另外的并发典范\n  - GO语言 \n\nhttps://blog.csdn.net/kl28978113/article/details/53457939"
+    }
+  ]
+}

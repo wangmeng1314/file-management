@@ -1,0 +1,9 @@
+{
+  "title": "IDEA插件开发",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "- 1、熟悉开发流程，使用gradle开发插件\n- 2、熟悉常规的概念\n  - project module \n- 3、熟悉界面开发方式\n  - 初始化界面\n  - 数据传递方式\n- 4、鉴权的方式"
+    }
+  ]
+}

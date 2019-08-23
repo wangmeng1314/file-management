@@ -1,0 +1,17 @@
+{
+  "title": "设计模式",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "### 基本原则\n#### 单一职责原则\n#### 开闭原则\n#### 里氏替换原则\n#### 依赖反转原则\n#### 接口隔离原则\n\n> 使用多个\n\n#### 合成复制原则\n> 尽量使用对象组合，而不是继承来达到复用的目的。就这一点而言，go语言并不提供继承。\n\n#### 迪米特原则\n> 一个软件实体应当尽可能少地与其他实体发生相互作用。"
+    },
+    {
+      "type": "text",
+      "data": "<a href=\"http://wdxtub.com/2016/03/26/latex-notation-table/\">http://wdxtub.com/2016/03/26/latex-notation-table/</a><div><br></div><div>latex学习笔记</div>"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"transition: none; display: inline-block; position: relative; border: 0px; padding: 0px; margin: 0px; vertical-align: 0px; line-height: normal; white-space: nowrap; width: 7.582em; height: 0px; font-size: 17.079999923706055px;\"><span style=\"transition: none; position: absolute; border: 0px; padding: 0px; margin: 0px; vertical-align: 0px; line-height: normal; clip: rect(0.888em, 1000em, 3.017em, -0.294em); top: -2.203em; left: 0em;\"><span class=\"mrow\" id=\"MathJax-Span-977\" style=\"transition: none; display: inline; position: static; border: 0px; padding: 0px; margin: 0px; vertical-align: 0px; line-height: normal;\"><span class=\"mtable\" id=\"MathJax-Span-978\" style=\"transition: none; display: inline; position: static; border: 0px; padding: 0px 0.167em; margin: 0px; vertical-align: 0px; line-height: normal;\"><span style=\"transition: none; display: inline-block; position: relative; border: 0px; padding: 0px; margin: 0px; vertical-align: 0px; line-height: normal; width: 7.223em; height: 0px;\"><span style=\"transition: none; position: absolute; border: 0px; padding: 0px; margin: 0px; vertical-align: 0px; line-height: normal; clip: rect(2.681em, 1000em, 4.81em, -0.461em); top: -3.996em; left: 0em;\"><span style=\"transition: none; display: inline-block; position: relative; border: 0px; padding: 0px; margin: 0px; vertical-align: 0px; line-height: normal; width: 7.223em; height: 0px;\"><span style=\"transition: none; position: absolute; border: 0px; padding: 0px; margin: 0px; vertical-align: 0px; line-height: normal; clip: rect(1.29em, 1000em, 3.419em, -0.461em); top: -2.605em; right: 0em;\"><span class=\"mtd\" id=\"MathJax-Span-979\" style=\"transition: none; display: inline; position: static; border: 0px; padding: 0px; margin: 0px; vertical-align: 0px; line-height: normal;\"><span class=\"mrow\" id=\"MathJax-Span-980\" style=\"transition: none; display: inline; position: static; border: 0px; padding: 0px; margin: 0px; vertical-align: 0px; line-height: normal;\"><span class=\"munderover\" id=\"MathJax-Span-981\" style=\"transition: none; display: inline; position: static; border: 0px; padding: 0px; margin: 0px; vertical-align: 0px; line-height: normal;\"><span style=\"transition: none; display: inline-block; position: relative; border: 0px; padding: 0px; margin: 0px; vertical-align: 0px; line-height: normal; width: 3.304em; height: 0px;\"><span style=\"transition: none; position: absolute; border: 0px; padding: 0px; margin: 0px; vertical-align: 0px; line-height: normal; clip: rect(1.725em, 1000em, 2.727em, -0.398em); top: -2.561em; left: 0.012em;\"><br></span></span></span></span></span></span></span></span></span></span></span></span></span>"
+    }
+  ]
+}

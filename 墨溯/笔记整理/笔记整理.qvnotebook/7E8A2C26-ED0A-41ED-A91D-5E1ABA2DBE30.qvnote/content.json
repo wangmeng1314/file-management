@@ -1,0 +1,9 @@
+{
+  "title": "工作",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "研发流程、测试流程\npostfix complection\ngit flow\nlive templates\n双引号、单引号转义的问题，直接采取IDEA自带的inject language来解决\n基本上常见的都可结局\n\n\n目的\n现有条件\n需要做的事情\n\n为什么需要强调敏捷开发？\n其实并不存在什么敏捷开发，只是当迭代的时间越短，对焦的频率越高的时候，即使偏离航向也能很快的拉回来。\n而不是放任自流一个月，再去调整方向。\n\n"
+    }
+  ]
+}

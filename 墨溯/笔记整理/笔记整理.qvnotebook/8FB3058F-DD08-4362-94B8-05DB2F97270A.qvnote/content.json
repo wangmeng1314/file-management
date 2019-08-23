@@ -1,0 +1,29 @@
+{
+  "title": "并发编程",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "### Servlet3.0异步编程\nservlet引入异步编程，大致可以分为如下几类：\n参考资料：http://www.cnblogs.com/davenkin/p/async-servlet.html\n\n1、获得请求的上下文的context，然后strat方法启动一个新的线程，进行业务逻辑的执行，完成后调用complete方法完成任务，并向容器申请新的线程，完成任务\n\n2、比起1的改进之处，我们更多的是在任务线程上自己维护一个线程池，让业务线程和视图线程分离。\n\n3、虽然处理流程改为了异步，但是数据流的读取依旧是阻塞的，因此我们不得不在流上加上一个监听器，在数据ready的时候才开始启动线程执行，避免线程等待，CPU空转情形的发生。"
+    },
+    {
+      "type": "markdown",
+      "data": "### RXJAVA\n> 在UNIX编程思想中其实谈到了这样一个论调，就是把线程这种并行的处理方式开放给程序员是一件愚蠢的事情，因为太多的程序员根本无法搞清楚在多线程环境下问题的复杂程度。\n\n> 而RXJAVA做的比较好的一点应该就是隔离了程序员直接对线程做操作，而让程序员只关注于自己的业务逻辑本身，不失为一种很好的方法。\n\n> 因此在我理解，流式编程更多的是说程序员把线程的控制权利下放，给了框架。\n\n### TODO\n\n> 希望能够深入研究一下这种方式\n\n"
+    },
+    {
+      "type": "text",
+      "data": "### NETTY的设计与实现<div><br></div>"
+    },
+    {
+      "type": "text",
+      "data": "### 五种UNIX IO模型"
+    },
+    {
+      "type": "text",
+      "data": "### JAVA中常见的线程同步问题<div>1、加锁 syngoized Locks</div><div><br></div><div>2、voladite实现主动内存同步</div><div><br></div><div>3、可重入锁</div><div><br></div><div><br></div>"
+    },
+    {
+      "type": "text",
+      "data": "&nbsp;"
+    }
+  ]
+}

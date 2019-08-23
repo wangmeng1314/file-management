@@ -1,0 +1,13 @@
+{
+  "title": "常用的Linux指令",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "![IMAGE](quiver-image-url/3AFA823030157EBA5DEEE3FB4373D19D.jpg =1824x626)\n目前系统的情况"
+    },
+    {
+      "type": "markdown",
+      "data": "\ncat fliggyshopcdn.m.taobao.com_2018_10_30_180000_190000 | awk '{print $8}'| sort | uniq -c | sort -r -n | head -n 100\n\n\n\n./jmap -histo   1706|more 查看目前JVM的对象的instance数以及占用的内存大小\n\nsudo dmesg|grep -i kill|less\n查找有无OOM KILLER发生\n"
+    }
+  ]
+}

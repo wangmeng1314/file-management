@@ -1,0 +1,9 @@
+{
+  "title": "jvm",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<pre style=\"background-color:#282c34;color:#c3cee3;font-family:'Source Code Pro';font-size:12.0pt;\"># custom IntelliJ IDEA VM options<br><br>-Xms6000m<br>-Xmx6000m<br>-XX:ReservedCodeCacheSize=1024m<br>-XX:+UseCompressedOops<br>-Dfile.encoding=UTF-8<br>-Dsun.io.useCanonCaches=false<br>-Dsun.awt.keepWorkingSetOnMinimize=true<br>-Djava.net.preferIPv4Stack=true<br>-Djsse.enableSNIExtension=false<br>-XX:+UseCodeCacheFlushing<br>-XX:+UseG1GC<br>-XX:MaxGCPauseMillis=200<br>-XX:InitiatingHeapOccupancyPercent=70<br>-XX:NewRatio=1<br>-XX:SurvivorRatio=4<br>-XX:+UseConcMarkSweepGC<br>-XX:SoftRefLRUPolicyMSPerMB=50<br><br>-XX:+CMSParallelRemarkEnabled<br><br>-XX:ConcGCThreads=8<br><br>-XX:ErrorFile=$USER_HOME/java_error_in_idea_%p.log<br>-XX:HeapDumpPath=$USER_HOME/java_error_in_idea.hprof<br>-Xbootclasspath/a:../lib/boot.jar</pre>"
+    }
+  ]
+}

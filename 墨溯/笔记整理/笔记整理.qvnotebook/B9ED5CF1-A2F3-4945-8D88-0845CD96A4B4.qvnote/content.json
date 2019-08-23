@@ -1,0 +1,9 @@
+{
+  "title": "cglib使用指南",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "- 带参数是构造参数\n- cglib生成的代理对象\n- cglib生成的代理对象调用的时候直接发起远端请求"
+    }
+  ]
+}

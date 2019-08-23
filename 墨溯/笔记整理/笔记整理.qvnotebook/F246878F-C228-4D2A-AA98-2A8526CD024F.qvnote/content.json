@@ -1,0 +1,9 @@
+{
+  "title": "linux工具链熟悉",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "### gcc \n- linux下的编译工具，支持c以及c++的编译\n### gdd\n- linux下的debug工具，支持c及c++\n- https://blog.csdn.net/21cnbao/article/details/7385161\n\n\n\n### java 双亲委派模型\n"
+    }
+  ]
+}
